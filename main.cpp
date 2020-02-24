@@ -22,4 +22,5 @@ void DoLevel(int lvl, int ex){
     cout << folder+"-"+to_string(ex)+" :"<<endl;
     Board res(data);
     cout << endl;
+
 }
