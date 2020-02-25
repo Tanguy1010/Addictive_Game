@@ -1,4 +1,6 @@
+#include "uiboard.h"
 #include <iostream>
+#include <QApplication>
 #include "board.h"
 
 #define LEVEL 4
@@ -9,10 +11,13 @@ using namespace std;
 
 void DoLevel(int lvl, int ex);
 
-int main()
+int main(int argc, char *argv[])
 {
-    for(int i=STARTINGEXO;i<=EXO;i++) DoLevel(LEVEL,i);
-    return 0;
+    QApplication a(argc, argv);
+    UIBoard w;
+    w.show();
+    //for(int i=STARTINGEXO;i<=EXO;i++) DoLevel(LEVEL,i);
+    return a.exec();
 }
 
 void DoLevel(int lvl, int ex){
